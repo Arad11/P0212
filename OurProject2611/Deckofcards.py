@@ -25,7 +25,8 @@ class Deckofcards:
         return f"the package is {self.package}"
 
     def suffle_the_pack(self):
-        return random.shuffle(self.package)
+        random.shuffle(self.package)
+        return self.package
 
     def deal_one(self):
         random.shuffle(self.package)

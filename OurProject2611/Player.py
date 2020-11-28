@@ -22,4 +22,4 @@ class Player:
         for i in range(1,num):
             # x = pack[i]
             newpack.append(pack[i])
-        return  newpack
+        return newpack
