@@ -13,13 +13,29 @@ class Player:
     def __str__(self):
         return f'{self.name} have the package {self.pack}'
 
+    def show(self):
+        return f'{self.name} have the package {self.pack}'
+
 
     def set_hand(self):
         pack = Deckofcards()
         pack = pack.suffle_the_pack()
         num = random.randint(1, 26)
         newpack = []
-        for i in range(1,num):
-            # x = pack[i]
+        for i in range(0,num-1):
             newpack.append(pack[i])
-        return newpack
+            self.pack = newpack
+        return self.pack
+
+    def random_card(self):
+        packlen = len(self.pack)
+        randnum = random.randint(0, packlen)
+        return self.pack[randnum]
+
+    def add_card(self, newcard):
+        self.pack.append(newcard)
+        return
+
+
+
+
