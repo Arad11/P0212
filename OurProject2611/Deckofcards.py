@@ -1,14 +1,16 @@
 import random
 from OurProject2611.Card import Card
+
+
 class Deckofcards:
     def __init__(self, sumcards=13):
-        self.diamond={}
-        self.spade={}
-        self.heart={}
-        self.club={}
-        self.package =[]
-        for i in range(1,14):
-            self.diamond.update({i:'diamond'})
+        self.diamond = {}
+        self.spade = {}
+        self.heart = {}
+        self.club = {}
+        self.package = []
+        for i in range(1, 14):
+            self.diamond.update({i: 'diamond'})
         self.package += self.diamond.items()
         for i in range(1, 14):
             self.spade.update({i: 'spade'})
@@ -20,7 +22,6 @@ class Deckofcards:
             self.club.update({i: 'club'})
         self.package += self.club.items()
 
-
     def __str__(self):
         return f"the package is {self.package}"
 
@@ -30,7 +31,7 @@ class Deckofcards:
 
     def deal_one(self):
         random.shuffle(self.package)
-        randnum = random.randint(0,len(self.package)-1)
+        randnum = random.randint(0, len(self.package) - 1)
         return self.package.pop(randnum)
 
     def show(self):

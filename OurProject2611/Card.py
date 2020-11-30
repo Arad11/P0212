@@ -5,10 +5,10 @@ class Card:
         self.suit = kind[suitID]
 
     def __str__(self):
-        kind = {1:'diamond', 2:'spade', 3:'heart', 4:'club'}
-        return  f'the card value is {self.value} \nthe suit is {kind[self.suit]}'
+        kind = {1: 'diamond', 2: 'spade', 3: 'heart', 4: 'club'}
+        return f'the card value is {self.value} \nthe suit is {kind[self.suit]}'
 
-    def wor(self, card1, *args):
+    def war(self, card1, *args):
         if self.value == 1:
             maxvalue = self.value
             maxsuit = self.suit
