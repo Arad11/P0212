@@ -4,9 +4,10 @@ class Card:
         kind = {'diamond': 1, 'spade': 2, 'heart': 3, 'club': 4}
         self.suit = kind[suitID]
 
-    def __str__(self):
+    def show(self):
         kind = {1: 'diamond', 2: 'spade', 3: 'heart', 4: 'club'}
         return f'the card value is {self.value} \nthe suit is {kind[self.suit]}'
+
 
     def war(self, card1, *args):
         if self.value == 1:
@@ -39,3 +40,9 @@ class Card:
                     maxsuit = args[i].suit
 
         return maxvalue, maxsuit
+
+
+# crd=Card(2, 'club')
+# crd1=Card(14, 'heart')
+# print(crd.war(crd1))
+#
